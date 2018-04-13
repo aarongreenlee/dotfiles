@@ -1,7 +1,7 @@
 export ALGOLIA_APP_ID=
 export ALGOLIA_API_KEY=
 export FUSION_ENVIRONMENT=dev
-export GCE_PROJECT_ID=fusion-dev-163815
+export GCE_PROJECT_ID=
 export HOSTNAME=agreenlee
 export FUSION_BUILD=local
 
@@ -13,7 +13,5 @@ export SCHEMA_PATH=$GOPATH/src
 export FUSION_BIND_ADDR=:8090
 export FUS=/Users/aarongreenlee/go/src/github.com/powerchordinc/platform
 alias fus="cd $FUS"
-alias honey="cd $FUS/apps/honey"
-alias runder="go run -tags workstation $FUS/apps/renderer/*.go"
 
 export SCHEMA_PATH=$GOPATH/src

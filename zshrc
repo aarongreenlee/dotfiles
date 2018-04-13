@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/aarongreenlee/.oh-my-zsh
 
-# Golang Setup
-export GOPATH=/Users/aarongreenlee/go
-export PATH=$PATH:$GOPATH/bin
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
@@ -25,7 +22,7 @@ ZSH_THEME="gozilla"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -51,7 +48,16 @@ plugins=(git)
 
 # User configuration
 
+
+# Golang setup
+export GOPATH=/Users/aarongreenlee/go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin/:$GOPATH/bin"
+export PATH=$PATH:$GOPATH/bin
+
+# Alias commands
+
+alias srcfus="source ~/dotfiles/fusion.private"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
