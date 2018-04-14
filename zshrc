@@ -57,7 +57,7 @@ export PATH=$PATH:$GOPATH/bin
 # Alias commands
 
 alias srcfus="source ~/dotfiles/fusion.private"
-
+alias srcbcm="source ~/dotfiles/bcm.private"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
