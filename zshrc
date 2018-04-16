@@ -4,8 +4,13 @@ export ZSH=/Users/aarongreenlee/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gozilla"
+# ZSH_THEME="gozilla"
 
+# Theme
+source ~/antigen.zsh
+#antigen use oh-my-zsh
+#antigen theme geometry-zsh/geometry
+#antigen apply
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -22,7 +27,7 @@ ZSH_THEME="gozilla"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
