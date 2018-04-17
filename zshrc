@@ -8,9 +8,9 @@ export ZSH=/Users/aarongreenlee/.oh-my-zsh
 
 # Theme
 source ~/antigen.zsh
-#antigen use oh-my-zsh
-#antigen theme geometry-zsh/geometry
-#antigen apply
+antigen use oh-my-zsh
+antigen theme geometry-zsh/geometry
+antigen apply
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -67,6 +67,9 @@ alias srcbcm="source ~/dotfiles/bcm.private"
 
 source $ZSH/oh-my-zsh.sh
 
+# Alias helper commands
+source ~/dotfiles/alias
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -93,7 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/aarongreenlee/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/aarongreenlee/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/aarongreenlee/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/aarongreenlee/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/aarongreenlee/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/aarongreenlee/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/aarongreenlee/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/aarongreenlee/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
