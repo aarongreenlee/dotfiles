@@ -34,6 +34,10 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-# install things that I like
+# install antigen zsh plugin manager
+curl -L git.io/antigen > ~/antigen.zsh
+
+# install vim-go  
+rm -rf ~/.vim/pack/plugins/start/vim-go
 mkdir -p ~/.vim/pack/plugins/start
 git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
