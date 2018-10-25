@@ -58,6 +58,7 @@ plugins=(git)
 export GOPATH=/Users/aarongreenlee/go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin/:$GOPATH/bin"
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:~/bin
 
 # Alias commands
 
