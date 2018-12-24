@@ -59,6 +59,7 @@ export GOPATH=/Users/aarongreenlee/go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin/:$GOPATH/bin"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:~/bin
+export PATH=$PATH:/Library/Frameworks/Mono.framework/Versions/Current/Commands
 
 # Alias commands
 alias srcfus="source ~/dotfiles/fusion.private"
