@@ -4,8 +4,8 @@
 # or when things have just changed.
 
 ########## Variables
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
+dir=~/dotfiles                           # dotfiles directory
+olddir=~/dotfiles_old                    # old dotfiles backup directory
 files="vimrc tmux.conf zshrc private"    # list of files/folders to symlink in homedir
 ##########
 
@@ -13,6 +13,8 @@ files="vimrc tmux.conf zshrc private"    # list of files/folders to symlink in h
 mkdir -p ~/.config/alacritty
 ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
 
+# Make our vim plugins directory
+mkdir -p $HOME/.vim-plugins
 # Link our vim init file
 ln -s $dir/init.vim ~/init.vim
 
@@ -41,3 +43,6 @@ curl -L git.io/antigen > ~/antigen.zsh
 rm -rf ~/.vim/pack/plugins/start/vim-go
 mkdir -p ~/.vim/pack/plugins/start
 git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
+
+# install dashboard
+go get -u github.com/senorprogrammer/wtf 

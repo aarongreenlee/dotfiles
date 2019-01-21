@@ -52,25 +52,12 @@ antigen apply
 plugins=(git)
 
 # User configuration
-
-
-# Golang setup
-export GOPATH=/Users/aarongreenlee/go
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin/:$GOPATH/bin"
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:~/bin
-export PATH=$PATH:/Library/Frameworks/Mono.framework/Versions/Current/Commands
-
-# Alias commands
-alias srcfus="source ~/dotfiles/fusion.private"
-alias srcbcm="source ~/dotfiles/bcm.private"
-alias dash="cd $GOPATH/src/github.com/senorprogrammer/wtf && make run"
-# export MANPATH="/usr/local/man:$MANPATH"
+source $HOME/dotfiles/.exports
 
 source $ZSH/oh-my-zsh.sh
 
 # Alias helper commands
-source ~/dotfiles/alias
+source ~/dotfiles/.alias
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -97,8 +84,3 @@ source ~/dotfiles/alias
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/aarongreenlee/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/aarongreenlee/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/aarongreenlee/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/aarongreenlee/google-cloud-sdk/completion.zsh.inc'; fi

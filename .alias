@@ -1,0 +1,3 @@
+alias godocs="godoc -http=:6060"
+alias srcbcm="source $GOPATH/src/github.com/aarongreenlee/big-cloud-machine/hack/local-env.sh"
+alias dash="cd $GOPATH/src/github.com/senorprogrammer/wtf && make run"
