@@ -46,3 +46,6 @@ git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
 
 # install dashboard
 go get -u github.com/senorprogrammer/wtf 
+cd $GOPATH/src/github.com/wtfutil/wtf && go install -ldflags="-s -w" && make run
+mkdir -p ~/.config/wtf
+cp -n ~/dotfiles/wtf-config.yml ~/.config/wtf/config.yml
