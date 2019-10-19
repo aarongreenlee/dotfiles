@@ -1,0 +1,65 @@
+wtf:
+  colors:
+    border:
+      focusable: darkslateblue
+      focused: orange
+      normal: gray
+  grid:
+    columns: [40, 40]
+    rows: [10, 10, 10, 10, 10, 10, 4]
+  refreshInterval: 1
+  mods:
+    prettyweather:
+      enabled: true
+      city: "tampa"
+      position:
+        top: 0
+        left: 2
+        height: 1
+        width: 1
+      refreshInterval: 300
+      unit: "m"
+      view: 0
+      language: "en"
+    jira:
+      apiKey: "xxxxxxxxxxxxxxxxxxxxxxx"
+      colors:
+        rows:
+          even: "lightblue"
+          odd: "white"
+      domain: "https://avengers-proj.atlassian.net"
+      email: "aaron.greenlee@xxxxxxxxxxxxxxxxxx"
+      enabled: true
+      jql: "resolution = Unresolved order by updated DESC"
+      position:
+        top: 0
+        left: 0
+        height: 6
+        width: 2
+      project: "Avengers"
+      refreshInterval: 900
+      username: "aaron.greenlee"
+      verifyServerCertificate: true
+    github:
+      apiKey: "xxxxxxxxxxxxxxxxxxxxxxx"
+      baseURL: ""
+      enabled: true
+      enableStatus: true
+      position:
+        top: 3
+        left: 2
+        height: 3 
+        width: 1
+      refreshInterval: 30
+      username: "aarongreenlee"
+      repositories:
+        project-avengers: "couchbaselabs"
+        bloomberg-exchange-modeler: "citrusbyte"
+    resourceusage:
+      enabled: true
+      position:
+        top: 1
+        left: 2
+        height: 2
+        width: 1
+      refreshInterval: 1
