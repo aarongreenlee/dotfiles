@@ -4,6 +4,8 @@ export GOPATH=$HOME/go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin/:$GOPATH/bin"
 export PATH=$PATH:$GOPATH/bin
 
+export PATH=$PATH:~/nvim-macos/bin
+
 # Home path bin
 export PATH=$PATH:~/bin
 
@@ -23,7 +25,7 @@ export PATH="$PATH:$HOME/.local/protoc-3/bin"
 export PATH="$PATH:$HOME/google-cloud-sdk/bin/"
 
 # Add protoc for protobuf compilaton
-export PATH="$PATH:$HOME/protoc/bin
+export PATH="$PATH:$HOME/protoc/bin"
 
 # Add Rust
 export PATH="$PATH:$HOME/.cargo/bin"
@@ -31,6 +33,8 @@ export PATH="$PATH:$HOME/.cargo/bin"
 # Add frequently used project paths
 export BCMPATH=$GOPATH/src/github.com/aarongreenlee/big-cloud-machine
 export GHPATH=$HOME/go/src/github.com
+export OUI=$GOPATH/src/github.com/aarongreenlee/outcome-web-ui
+export OAPI=$GOPATH/src/github.com/aarongreenlee/outcome-web-api
 
 # Google Cloud
 #
