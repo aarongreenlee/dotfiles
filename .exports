@@ -31,10 +31,8 @@ export PATH="$PATH:$HOME/protoc/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 
 # Add frequently used project paths
-export BCMPATH=$GOPATH/src/github.com/aarongreenlee/big-cloud-machine
 export GHPATH=$HOME/go/src/github.com
-export OUI=$GOPATH/src/github.com/aarongreenlee/outcome-web-ui
-export OAPI=$GOPATH/src/github.com/aarongreenlee/outcome-web-api
+export AGPATH=$GOPATH/src/github.com/aarongreenlee
 
 # Google Cloud
 #
