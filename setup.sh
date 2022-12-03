@@ -9,15 +9,6 @@ olddir=~/dotfiles_old                    # old dotfiles backup directory
 files="vimrc tmux.conf zshrc private"    # list of files/folders to symlink in homedir
 ##########
 
-# Link the Alacritty config file
-mkdir -p ~/.config/alacritty
-ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
-
-# Make our vim plugins directory
-mkdir -p $HOME/.vim-plugins
-# Link our vim init file
-ln -s $dir/init.vim ~/init.vim
-
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
@@ -37,15 +28,19 @@ for file in $files; do
 done
 
 # install antigen zsh plugin manager
-curl -L git.io/antigen > ~/antigen.zsh
+# curl -L git.io/antigen > ~/antigen.zsh
 
 # install vim-go  
-rm -rf ~/.vim/pack/plugins/start/vim-go
-mkdir -p ~/.vim/pack/plugins/start
-git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
+# rm -rf ~/.vim/pack/plugins/start/vim-go
+# mkdir -p ~/.vim/pack/plugins/start
+# git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
 
 # install dashboard
-go get -u github.com/senorprogrammer/wtf 
-cd $GOPATH/src/github.com/wtfutil/wtf && go install -ldflags="-s -w" && make run
-mkdir -p ~/.config/wtf
-cp -n ~/dotfiles/wtf-config.yml ~/.config/wtf/config.yml
+# go get -u github.com/senorprogrammer/wtf 
+# cd $GOPATH/src/github.com/wtfutil/wtf && go install -ldflags="-s -w" && make run
+# mkdir -p ~/.config/wtf
+# cp -n ~/dotfiles/wtf-config.yml ~/.config/wtf/config.yml
+
+# Setup neovim
+cd $dir
+sh ./setup-nvim.sh
