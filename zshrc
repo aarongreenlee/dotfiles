@@ -84,3 +84,12 @@ source ~/dotfiles/.alias
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+export PNPM_HOME="/Users/aarongreenlee/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then . '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then . '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi
