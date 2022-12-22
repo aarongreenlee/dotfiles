@@ -33,6 +33,10 @@ export PATH="$PATH:$HOME/.cargo/bin"
 # Add frequently used project paths
 export GHPATH=$HOME/go/src/github.com
 export AGPATH=$GOPATH/src/github.com/aarongreenlee
+export OPATH=$GHPATH/aarongreenlee/outcome.dev
+export CCPATH=$GHPATH/couchbasecloud/couchbase-cloud
+export CLABPATH=$GHPATH/couchbaselabs/
+export CBPATH=$GHPATH/couchbase
 
 # Google Cloud
 #
