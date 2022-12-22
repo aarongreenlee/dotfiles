@@ -10,17 +10,18 @@ keymap.set("n", "x", '"_x') -- do not copy deleted characters to register
 keymap.set("n", "<leader>+", "<C-a>") -- incrmeent number
 keymap.set("n", "<leader>-", "<C-x>") -- decrement number
 
--- windows
+-- splits
 keymap.set("n", "<leader>s|", "<C-w>v") -- split vertically
 keymap.set("n", "<leader>s-", "<C-w>s") -- split horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- resize to equalize width
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split
+keymap.set("n", "<leader>sw", "<C-w>")
 
 -- tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open a new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to the next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to the previous tab
+keymap.set("n", "<leader>tp", ":tabp<CR>") -- to the previous tab
 
 -- plugins
 
@@ -49,11 +50,11 @@ keymap.set("n", "<leader>12", ":NvimTreeToggle<CR>")
 keymap.set("n", "<leader>11", ":NvimTreeFocus<CR>")
 
 -- telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>")
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>")
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
-keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")  -- find files 
+keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")   -- find strings
+keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find current string the cursor is on throughout the project
+keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")     -- search active buffers
+keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")   -- search help tags
 
 
 
