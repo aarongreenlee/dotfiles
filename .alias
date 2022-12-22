@@ -1,10 +1,15 @@
+# Run godocs server
 alias godocs="godoc -http=:6060"
-alias srcbcm="source $GOPATH/src/github.com/aarongreenlee/big-cloud-machine/hack/local-env.sh"
+
+# alias srcbcm="source $GOPATH/src/github.com/aarongreenlee/big-cloud-machine/hack/local-env.sh"
 alias dash="cd $GOPATH/src/github.com/senorprogrammer/wtf && make run"
+
 alias lol="git log --graph --decorate --pretty=oneline --abbrev-commit"
 alias lola="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
 alias la="! git config --get-regexp ^alias. | cut -d. -f2-"
-alias wtf="$GOPATH/src/github.com/wtfutil/wtf/bin/wtf"
+
+# Type fewer chearacters for neovide
+alias nv="neovide"
 
 hi() {
   hub issue show -f "%i %S %sC %t %Mt %l %n %b" ${1} 
