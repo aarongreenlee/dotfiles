@@ -28,20 +28,6 @@ for file in $files; do
     echo ""
 done
 
-# install antigen zsh plugin manager
-# curl -L git.io/antigen > ~/antigen.zsh
-
-# install vim-go  
-# rm -rf ~/.vim/pack/plugins/start/vim-go
-# mkdir -p ~/.vim/pack/plugins/start
-# git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
-
-# install dashboard
-# go get -u github.com/senorprogrammer/wtf 
-# cd $GOPATH/src/github.com/wtfutil/wtf && go install -ldflags="-s -w" && make run
-# mkdir -p ~/.config/wtf
-# cp -n ~/dotfiles/wtf-config.yml ~/.config/wtf/config.yml
-
 # Setup neovim
 cd $dir
 sh ./setup-nvim.sh
