@@ -3,6 +3,8 @@
 vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
+-- CRTL+i to step forward; CTRL+o to step backward
+
 -- general
 keymap.set("i", "jk", "<ESC>") -- escape using 'jk'
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear highlighitng
