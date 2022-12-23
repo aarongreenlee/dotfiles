@@ -63,6 +63,7 @@ return packer.startup(function(use)
   use("hrsh7th/nvim-cmp") -- completion plugin
   use("hrsh7th/cmp-buffer") -- source for text in buffer
   use("hrsh7th/cmp-path") -- source for file system paths
+  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
   -- snippets
   use("L3MON4D3/LuaSnip") -- snippet engine
@@ -99,6 +100,9 @@ return packer.startup(function(use)
 
   -- git integration
   use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+  
+  -- GitHub Copilot
+  use("github/copilot.vim")
 
   if packer_bootstrap then
     require("packer").sync()
