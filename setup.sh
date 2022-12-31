@@ -31,3 +31,9 @@ done
 # Setup neovim
 cd $dir
 sh ./setup-nvim.sh
+
+# Setup ripgrep
+echo "Updating brew..."
+brew update
+"echo "Installing ripgrep..."
+brew install ripgrep

@@ -25,6 +25,12 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to the next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") -- to the previous tab
 
+-- move line(s) up/down without mutating the register
+keymap.set("n", "<S-Up>", ":m .-2<CR>==") -- move line up
+keymap.set("n", "<S-Down>", ":m .+1<CR>==") -- move line up
+keymap.set("v", "<S-Up>", ":m '<-2<CR>gv=gv") -- move selected line(s) up
+keymap.set("v", "<S-Down>", ":m '>+1<CR>gv=gv") -- move selected line(s) down
+
 -- plugins
 
 -- Move between windows using the vim-tmux-navigator plugin:
@@ -53,7 +59,7 @@ keymap.set("n", "<leader>11", ":NvimTreeFocus<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")  -- find files 
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")   -- find strings
+keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")   -- find strings
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find current string the cursor is on throughout the project
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")     -- search active buffers
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")   -- search help tags
