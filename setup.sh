@@ -9,6 +9,14 @@ olddir=~/dotfiles_old                    # old dotfiles backup directory
 files="vimrc tmux.conf zshrc private"    # list of files/folders to symlink in homedir
 ##########
 
+# install brew if needed
+if ! command -v brew &> /dev/null
+then
+    echo "brew needs to be installed"
+    export PATH=$PATH:/opt/homebrew/bin 
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"   
+fi
+
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
@@ -35,5 +43,5 @@ sh ./setup-nvim.sh
 # Setup ripgrep
 echo "Updating brew..."
 brew update
-"echo "Installing ripgrep..."
+echo "Installing ripgrep..."
 brew install ripgrep
