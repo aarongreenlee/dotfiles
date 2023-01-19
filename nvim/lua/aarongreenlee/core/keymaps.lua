@@ -1,19 +1,24 @@
+-- keymaps file is where most keyboard shortcuts are defined.
+-- some keyboard shortcuts may be found in plugins/*.
 
 -- set the leader key to "spacebar"
 vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
--- CRTL+i to step forward; CTRL+o to step backward
+-- the following are standard commands that
+-- I'll document for my own poor memory:
+-- CRTL+i to step forward through file edits
+-- CTRL+o to step backward through file edits
 
 -- general
-keymap.set("i", "jk", "<ESC>") -- escape using 'jk'
+keymap.set("i", "jk", "<ESC>") -- escape using 'jk' at the same time
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear highlighitng
 keymap.set("n", "x", '"_x') -- do not copy deleted characters to register
 keymap.set("n", "<leader>+", "<C-a>") -- incrmeent number
 keymap.set("n", "<leader>-", "<C-x>") -- decrement number
 
 -- splits
-keymap.set("n", "<leader>s|", "<C-w>v") -- split vertically
+keymap.set("n", "<leader>ss", "<C-w>v") -- split vertically
 keymap.set("n", "<leader>s-", "<C-w>s") -- split horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- resize to equalize width
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split
