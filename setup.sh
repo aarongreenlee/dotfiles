@@ -17,6 +17,13 @@ then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"   
 fi
 
+# install zsh-users/antigen plugin manager for zsh
+curl -L git.io/antigen > antigen.zsh
+cp antigen.zsh ~/antigen.zsh
+
+# install sh -c https://ohmyz.sh/#install
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # install neovim
 printf "\ninstalling neovim\n"
 brew install neovim
