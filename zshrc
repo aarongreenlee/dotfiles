@@ -11,6 +11,7 @@ source ~/antigen.zsh
 antigen use oh-my-zsh
 antigen theme geometry-zsh/geometry
 antigen apply
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -51,12 +52,13 @@ antigen apply
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# -------------------------------------------
 # User configuration
+# -------------------------------------------
+
+# $PATH
 source $HOME/dotfiles/.exports
-
 source $ZSH/oh-my-zsh.sh
-
-# Alias helper commands
 source ~/dotfiles/.alias
 
 # You may need to manually set your language environment
@@ -84,12 +86,11 @@ source ~/dotfiles/.alias
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-export PNPM_HOME="/Users/aarongreenlee/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then . '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then . '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi
+
+# Add completions for fnm so we can more eaisly switch between Node versions where there is a `.node-version` or `.nvmrc` file present.
+eval "$(fnm env --use-on-cd)"
