@@ -52,6 +52,7 @@ export PATH=$PATH:/Library/Frameworks/Mono.framework/Versions/Current/Commands
 
 # Add Intellij IDEA
 export PATH=$PATH:~/idea
+export PATH=$PATH:"/Users/aarongreenlee/Library/Application Support/JetBrains/Toolbox/scripts"
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
