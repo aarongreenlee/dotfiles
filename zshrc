@@ -94,3 +94,9 @@ if [ -f '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]
 
 # Add completions for fnm so we can more eaisly switch between Node versions where there is a `.node-version` or `.nvmrc` file present.
 eval "$(fnm env --use-on-cd)"
+
+# pnpm
+export PNPM_HOME="/Users/aarongreenlee/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
