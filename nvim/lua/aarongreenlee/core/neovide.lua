@@ -8,7 +8,7 @@ local alpha = function()
 end
 
 -- ref: https://neovide.dev/configuration.html
--- if vim.g.neovide then
+if vim.g.neovide then
   vim.g.neovide_transparency = 0.0
   vim.g.transparency = 0.95
   vim.g.neovide_background_color = "#0f1117" .. alpha() -- "rgba(0, 30, 49, 0.8)"
@@ -17,6 +17,6 @@ end
   vim.g.neovide_floating_blur_amount_y = 10.0
   vim.g.neovide_cursor_vfx_mode = "railgun"
   vim.g.neovide_scale_factor = 1.0
--- end
+end
 
 
