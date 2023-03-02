@@ -8,7 +8,8 @@ alias lol="git log --graph --decorate --pretty=oneline --abbrev-commit"
 alias lola="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
 alias la="! git config --get-regexp ^alias. | cut -d. -f2-"
 alias gdlb="git for-each-ref --format '%(refname:short)' refs/heads | grep -v 'master\|main' | xargs git branch -D"
-
+alias gscf="git status -s | cut -c4- | tr '\n' ' '"
+alias rfcf="yarn rome format --write $(echo $(git status -s | cut -c3- | tr '\n' ' '))"
 # Type fewer chearacters for neovide
 alias nv="neovide"
 
