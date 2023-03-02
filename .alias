@@ -4,17 +4,27 @@ alias godocs="godoc -http=:6060"
 # alias srcbcm="source $GOPATH/src/github.com/aarongreenlee/big-cloud-machine/hack/local-env.sh"
 alias dash="cd $GOPATH/src/github.com/senorprogrammer/wtf && make run"
 
+# show a git log with the most recent commits on top
 alias lol="git log --graph --decorate --pretty=oneline --abbrev-commit"
+
+# show a git log with the most recent commits on top, including all branches
 alias lola="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
-alias la="! git config --get-regexp ^alias. | cut -d. -f2-"
+
+# delete all local branches except for the one that is activly checked out
 alias gdlb="git for-each-ref --format '%(refname:short)' refs/heads | grep -v 'master\|main' | xargs git branch -D"
-alias gscf="git status -s | cut -c4- | tr '\n' ' '"
+
+# print a list of all of the dirty files without the status (e.g., no A, M, D, etc.)
+alias gscf="git status -s | cut -c4-"
+
+# Via yarn, run rome format and rewrite all fo teh files that have changed
 alias rfcf="yarn rome format --write $(echo $(git status -s | cut -c3- | tr '\n' ' '))"
-# Type fewer chearacters for neovide
+
+# Type fewer characters for neovide
 alias nv="neovide"
 
 hi() {
   hub issue show -f "%i %S %sC %t %Mt %l %n %b" ${1} 
 }
 
-echo "github.com/aarongreenlee/dotfiles - Alias configured"
+# Print this file to help me remember all of the aliases
+alias pa="cat ~/dotfiles/.alias | less"
