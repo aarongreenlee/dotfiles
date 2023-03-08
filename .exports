@@ -76,3 +76,4 @@ if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-clou
 export GHPATH=$REPOPATH/src/github.com
 export AGPATH=$REPOPATH/src/github.com/aarongreenlee
 export OCPATH=$REPOPATH/src/github.com/outcome-dev/outcome.dev
+export PWPATH=$REPOPATH/src/github.com/post-media/post-web
