@@ -76,5 +76,3 @@ if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-clou
 export GHPATH=$REPOPATH/src/github.com
 export AGPATH=$REPOPATH/src/github.com/aarongreenlee
 export OCPATH=$REPOPATH/src/github.com/outcome-dev/outcome.dev
-
-echo "github.com/aarongreenlee/dotfiles - Paths configured"
