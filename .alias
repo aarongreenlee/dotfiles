@@ -28,3 +28,5 @@ hi() {
 
 # Print this file to help me remember all of the aliases
 alias pa="cat ~/dotfiles/.alias | less"
+
+alias gff="git merge --ff-only dev"
