@@ -78,7 +78,7 @@ if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-clou
 # PROJECT PATHS FOR THE LAZY AARON
 export GHPATH=$REPOPATH/src/github.com
 export AGPATH=$REPOPATH/src/github.com/aarongreenlee
-export OCPATH=$REPOPATH/src/github.com/outcome-dev/outcome.dev
+export OPATH=$REPOPATH/src/github.com/outcome-dev/outcome-properties
 export PWPATH=$REPOPATH/src/github.com/post-media/post-web
 
 if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
