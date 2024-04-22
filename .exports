@@ -35,6 +35,10 @@ export PATH="$PATH:$HOME/.local/protoc-3/bin"
 export PATH="$PATH:$HOME/protoc/bin"
 
 # ----------------------------
+# Python
+export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.12/bin"
+
+# ----------------------------
 # JS/TS
 
 # Setup pnpm paths
@@ -78,10 +82,11 @@ if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-clou
 # PROJECT PATHS FOR THE LAZY AARON
 export GHPATH=$REPOPATH/src/github.com
 export AGPATH=$REPOPATH/src/github.com/aarongreenlee
-export OPATH=$REPOPATH/src/github.com/outcome-dev/outcome-properties
+export OPATH=$REPOPATH/src/github.com/outcome-dev/platform
 export PWPATH=$REPOPATH/src/github.com/post-media/post-web
 
 if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
   # export PATH=/opt/homebrew/opt/ruby/bin:$PATH
   export PATH=`gem environment gemdir`/bin:$PATH
 fi
+

@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/aarongreenlee/.oh-my-zsh
 
@@ -88,19 +86,23 @@ source ~/dotfiles/.alias
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then . '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then . '/Users/aarongreenlee/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi
-
 # Add completions for fnm so we can more eaisly switch between Node versions where there is a `.node-version` or `.nvmrc` file present.
 eval "$(fnm env --use-on-cd)"
 
 # pnpm
 export PNPM_HOME="/Users/aarongreenlee/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 # pnpm end
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/aarongreenlee/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/aarongreenlee/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/aarongreenlee/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/aarongreenlee/google-cloud-sdk/completion.zsh.inc'; fi

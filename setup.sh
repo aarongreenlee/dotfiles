@@ -4,7 +4,11 @@
 # executed more frequently.
 
 # create a source code directory
+println "Creating ~/repos to house source code"
 mkdir -p ~/repos
+
+# install sh -c https://ohmyz.sh/#install
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install zsh-users/antigen plugin manager for zsh
 curl -L git.io/antigen > antigen.zsh
@@ -18,29 +22,39 @@ then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"   
 fi
 
-# install sh -c https://ohmyz.sh/#install
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# install neovim
-printf "\ninstalling neovim\n"
-brew install neovim
-
-# Setup ripgrep, needed for some neovim plugins
-echo "\nUpdating brew...\n"
+echo -e "\nUpdating brew...\n"
 brew update
 
-echo "\nInstalling ripgrep...\n"
+echo -e "\nInstalling zoxide for improved terminal navigation\n"
+brew install zoxide
+
+echo -e "\ninstalling neovim for text editing\n"
+brew install neovim
+
+echo -e "\ninstalling nerdfonts icons in nvim\n"
+brew tap homebrew/cask-fonts
+brew install font-meslo-lg-nerd-font
+
+echo -e "\nInstalling ripgrep for fast grep\n"
 brew install ripgrep
 
-# Install neovide, a neovim implementation using GPU
-echo "\nInstalling neovide\n"
-brew install --cask neovide
-
-# Install AltTab to improve window switching on Mac
-echo "\nInstalling AltTab\n"
+echo -e "\nInstalling AltTab to improve window switching on Mac\n"
 brew install --cask alt-tab
+
+echo -e "\nInstalling node\n"
+brew install node
+
+echo -e "\nInstalling Fast Node Switcher\n"
+curl -fsSL https://fnm.vercel.app/install | bash
+
+echo -e "\nInstalling Go\n"
+brew install golang
+
+echo -e "\nInstalling Rust\n"
+brew install rust
 
 # setup the terminal
 sh ~/dotfiles/setup-terminal.sh
 sh ~/dotfiles/setup-nvim.sh
 
+echo -e "\nNow, you probably want to open settings for iTerm2 and verify your font is\n\n'MesloLGS Nerd Font Mono' or 'JetBrainsMono Nerd Font Mono'\n"
