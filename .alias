@@ -29,3 +29,5 @@ alias gff="git merge --ff-only dev"
 
 # Delete all docker containers
 alias ~ddc="docker rm $(docker ps -aq)"
+
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"

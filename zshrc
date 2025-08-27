@@ -106,3 +106,19 @@ if [ -f '/Users/aarongreenlee/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/a
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/aarongreenlee/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/aarongreenlee/google-cloud-sdk/completion.zsh.inc'; fi
+
+# bun completions
+[ -s "/Users/aarongreenlee/.bun/_bun" ] && source "/Users/aarongreenlee/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+eval "$(zoxide init zsh)"
+
+# fnm
+FNM_PATH="/Users/aarongreenlee/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/aarongreenlee/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi

@@ -4,7 +4,7 @@ export REPOPATH=$HOME/repos
 
 # Ensure my github directory exists
 mkdir -p $REPOPATH/src/github.com/aarongreenlee
-mkdir -p $REPOPATH/src/github.com/outcome.dev
+mkdir -p $REPOPATH/src/github.com/outcome-dev
 mkdir -p $REPOPATH/bin
 export PATH=$PATH:$REPOPATH/bin
 
